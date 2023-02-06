@@ -24,14 +24,13 @@ public class HelloController implements Initializable {
     }
 
     public void addRadioFunc() {
-
-
+btnCtr=1;
         for (int i = 0; i < buttons.length; i++) {
 
             btnName = "Radio " + btnCtr;
             buttons[i] = new Button(btnName);
 
-            hBox.getChildren().add(buttons[btnCtr]);
+            hBox.getChildren().add(buttons[i]);
             btnCtr++;
         }
 
