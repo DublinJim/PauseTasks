@@ -19,6 +19,7 @@ public class HelloController implements Initializable {
     public Button btnRemoveKeyboard;
     public Button tstBtn;
     public Button btnMakeKeyboard;
+    public Button btnRemoveRadios;
     public int btnCtr;
     public String btnName;
     public HBox btnHbox;
@@ -31,9 +32,9 @@ public class HelloController implements Initializable {
         btnHbox.setSpacing(10);
 
 
-        Button removeBtn = new Button("Remove Radios");
-        btnHbox.getChildren().add(removeBtn);
-        removeBtn.setOnAction(e -> removeRadioButtons());
+        btnRemoveRadios = new Button("Remove Radios");
+        btnHbox.getChildren().add(btnRemoveRadios);
+        btnRemoveRadios.setOnAction(e -> removeRadioButtons());
 
         btnMakeKeyboard = new Button("Make keyboard");
         tstBtn = new Button("Test");
@@ -45,6 +46,7 @@ public class HelloController implements Initializable {
         btnRemoveKeyboard = new Button("Remove Keyboard");
         btnRemoveKeyboard.setOnAction(e -> removeKeyboardButtons());
         btnRemoveKeyboard.setDisable(true);
+        btnRemoveRadios.setDisable(true);
 
         btnHbox.getChildren().add(btnMakeKeyboard);
         btnHbox.getChildren().add(btnRemoveKeyboard);
@@ -61,13 +63,16 @@ public class HelloController implements Initializable {
             hBox.getChildren().add(RadioBtns[i]);
             btnCtr++;
         }
-
+        btnRemoveRadios.setDisable(false);
+        btnAddRadio.setDisable(true);
     }
 
     public void removeRadioButtons() {
 
         for (Button button : RadioBtns) hBox.getChildren().remove(button);
 
+        btnRemoveRadios.setDisable(true);
+        btnAddRadio.setDisable(false);
     }
 
     public void makeKeyboardButtons() {
