@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="773777a3-77d2-4551-b183-d77035035d89" name="Changes" comment="makes a keyboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="773777a3-77d2-4551-b183-d77035035d89" name="Changes" comment="keyboard buttons have functions">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675868707744</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="keyboard buttons have functions">
+      <created>1676053108624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676053108624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,24 +113,25 @@
     <MESSAGE value="makes an array of 10 buttons" />
     <MESSAGE value="10 buttons appear marked 1 to 10" />
     <MESSAGE value="makes a keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="makes a keyboard" />
+    <MESSAGE value="keyboard buttons have functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="keyboard buttons have functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>47</line>
+          <line>51</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>46</line>
+          <line>50</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>62</line>
+          <line>66</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>

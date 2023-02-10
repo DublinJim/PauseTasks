@@ -17,6 +17,7 @@ public class HelloController implements Initializable {
     public Button btnAddRadio;
     public Button btnRemoveKeyboard;
     public Button tstBtn;
+
     public int btnCtr;
     public String btnName;
 
@@ -33,10 +34,13 @@ public class HelloController implements Initializable {
         tstBtn = new Button("Test");
         hBox.getChildren().add(makeKeyboard);
         hBox.getChildren().add(tstBtn);
-
         makeKeyboard.setOnAction(e -> makeKeyboardButtons());
-
         tstBtn.setOnAction(e -> testChar());
+
+        btnRemoveKeyboard= new Button("Remove Keyboard");
+        btnRemoveKeyboard.setOnAction(e-> removeKeyboardButtons());
+        hBox.getChildren().add(btnRemoveKeyboard);
+
     }
 
     public void addRadioFunc() {
@@ -64,9 +68,7 @@ public class HelloController implements Initializable {
             String ascLabel = Character.toString(i);
             keyBoardBtns[btnCtr] = new Button(ascLabel);
             int finalBtnCtr = btnCtr;
-            keyBoardBtns[btnCtr].setOnAction(e -> {
-                keyBoardBtns[finalBtnCtr].setDisable(true);
-            });
+            keyBoardBtns[btnCtr].setOnAction(e -> keyBoardBtns[finalBtnCtr].setDisable(true));
             hBox.getChildren().add(keyBoardBtns[btnCtr]);
             btnCtr++;
         }
