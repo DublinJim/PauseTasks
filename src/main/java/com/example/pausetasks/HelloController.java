@@ -31,14 +31,12 @@ public class HelloController implements Initializable {
         hBox.setPadding(new Insets(10.0));
         btnHbox.setSpacing(10);
 
-
         btnRemoveRadios = new Button("Remove Radios");
         btnHbox.getChildren().add(btnRemoveRadios);
         btnRemoveRadios.setOnAction(e -> removeRadioButtons());
 
         btnMakeKeyboard = new Button("Make keyboard");
-        tstBtn = new Button("Test");
-
+        tstBtn = new Button("Spare");
 
         btnMakeKeyboard.setOnAction(e -> makeKeyboardButtons());
         tstBtn.setOnAction(e -> testChar());
@@ -65,6 +63,7 @@ public class HelloController implements Initializable {
         }
         btnRemoveRadios.setDisable(false);
         btnAddRadio.setDisable(true);
+        removeKeyboardButtons();
     }
 
     public void removeRadioButtons() {
@@ -73,6 +72,7 @@ public class HelloController implements Initializable {
 
         btnRemoveRadios.setDisable(true);
         btnAddRadio.setDisable(false);
+
     }
 
     public void makeKeyboardButtons() {
@@ -97,8 +97,6 @@ public class HelloController implements Initializable {
             String tst = Character.toString(i);
             System.out.println("test char is " + tst);
         }
-
-
     }
 
     public void removeKeyboardButtons() {
