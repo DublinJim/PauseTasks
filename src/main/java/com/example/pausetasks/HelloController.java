@@ -17,7 +17,7 @@ public class HelloController implements Initializable {
     public Button btnAddRadio;
     public Button btnRemoveKeyboard;
     public Button tstBtn;
-
+    public Button btnMakeKeyboard;
     public int btnCtr;
     public String btnName;
 
@@ -30,17 +30,20 @@ public class HelloController implements Initializable {
         hBox.getChildren().add(removeBtn);
         removeBtn.setOnAction(e -> removeRadioButtons());
 
-        Button makeKeyboard = new Button("Make keyboard");
+        btnMakeKeyboard = new Button("Make keyboard");
         tstBtn = new Button("Test");
-        hBox.getChildren().add(makeKeyboard);
-        hBox.getChildren().add(tstBtn);
-        makeKeyboard.setOnAction(e -> makeKeyboardButtons());
+
+
+        btnMakeKeyboard.setOnAction(e -> makeKeyboardButtons());
         tstBtn.setOnAction(e -> testChar());
 
-        btnRemoveKeyboard= new Button("Remove Keyboard");
-        btnRemoveKeyboard.setOnAction(e-> removeKeyboardButtons());
+        btnRemoveKeyboard = new Button("Remove Keyboard");
+        btnRemoveKeyboard.setOnAction(e -> removeKeyboardButtons());
         btnRemoveKeyboard.setDisable(true);
+
+        hBox.getChildren().add(btnMakeKeyboard);
         hBox.getChildren().add(btnRemoveKeyboard);
+        hBox.getChildren().add(tstBtn);
 
     }
 
@@ -73,6 +76,8 @@ public class HelloController implements Initializable {
             hBox.getChildren().add(keyBoardBtns[btnCtr]);
             btnCtr++;
         }
+        btnRemoveKeyboard.setDisable(false);
+        btnMakeKeyboard.setDisable(true);
 
     }
 
@@ -90,6 +95,8 @@ public class HelloController implements Initializable {
         for (Button keyBoardBtn : keyBoardBtns) {
             hBox.getChildren().remove(keyBoardBtn);
         }
+        btnRemoveKeyboard.setDisable(true);
+        btnMakeKeyboard.setDisable(false);
     }
 
 }
