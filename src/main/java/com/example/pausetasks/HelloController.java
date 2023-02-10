@@ -78,6 +78,7 @@ public class HelloController implements Initializable {
     public void makeKeyboardButtons() {
         int btnCtr = 0;
 
+        removeRadioButtons();
         for (int i = 65; i < 90; i++) {
             String ascLabel = Character.toString(i);
             keyBoardBtns[btnCtr] = new Button(ascLabel);
