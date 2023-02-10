@@ -1,6 +1,7 @@
 package com.example.pausetasks;
 
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -20,14 +21,18 @@ public class HelloController implements Initializable {
     public Button btnMakeKeyboard;
     public int btnCtr;
     public String btnName;
+    public HBox btnHbox;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnCtr = 0;
         hBox.setSpacing(10);
+        hBox.setPadding(new Insets(10.0));
+        btnHbox.setSpacing(10);
+
 
         Button removeBtn = new Button("Remove Radios");
-        hBox.getChildren().add(removeBtn);
+        btnHbox.getChildren().add(removeBtn);
         removeBtn.setOnAction(e -> removeRadioButtons());
 
         btnMakeKeyboard = new Button("Make keyboard");
@@ -41,9 +46,9 @@ public class HelloController implements Initializable {
         btnRemoveKeyboard.setOnAction(e -> removeKeyboardButtons());
         btnRemoveKeyboard.setDisable(true);
 
-        hBox.getChildren().add(btnMakeKeyboard);
-        hBox.getChildren().add(btnRemoveKeyboard);
-        hBox.getChildren().add(tstBtn);
+        btnHbox.getChildren().add(btnMakeKeyboard);
+        btnHbox.getChildren().add(btnRemoveKeyboard);
+        btnHbox.getChildren().add(tstBtn);
 
     }
 
