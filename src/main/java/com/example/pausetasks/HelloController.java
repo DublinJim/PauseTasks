@@ -11,32 +11,32 @@ import java.util.ResourceBundle;
 public class HelloController implements Initializable {
 
     private final Button[] RadioBtns = new Button[10];
+    private final Button[] keyBoardBtns = new Button[25];
     public AnchorPane rootPane;
     public HBox hBox;
     public Button btnAddRadio;
+    public Button btnRemoveKeyboard;
     public Button tstBtn;
     public int btnCtr;
     public String btnName;
-    private final Button[] keyBoardBtns = new Button[25];
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnCtr = 0;
         hBox.setSpacing(10);
+
         Button removeBtn = new Button("Remove Radios");
         hBox.getChildren().add(removeBtn);
-        removeBtn.setOnAction(e -> removeButtons());
+        removeBtn.setOnAction(e -> removeRadioButtons());
+
         Button makeKeyboard = new Button("Make keyboard");
         tstBtn = new Button("Test");
         hBox.getChildren().add(makeKeyboard);
         hBox.getChildren().add(tstBtn);
 
-        makeKeyboard.setOnAction(e -> {
-            removeButtons();
-            makeKeyboardButtons();
-        });
+        makeKeyboard.setOnAction(e -> makeKeyboardButtons());
 
-        tstBtn.setOnAction(e-> testChar());
+        tstBtn.setOnAction(e -> testChar());
     }
 
     public void addRadioFunc() {
@@ -45,44 +45,48 @@ public class HelloController implements Initializable {
 
             btnName = "Radio " + btnCtr;
             RadioBtns[i] = new Button(btnName);
-
             hBox.getChildren().add(RadioBtns[i]);
             btnCtr++;
         }
 
     }
 
-    public void removeButtons() {
+    public void removeRadioButtons() {
 
         for (Button button : RadioBtns) hBox.getChildren().remove(button);
 
     }
 
     public void makeKeyboardButtons() {
+        int btnCtr = 0;
 
-int btnCtr =0;
-
-            for (int a = 65; a < 90; a++) {
-
-                String ascLabel = Character.toString(a);
-                keyBoardBtns[btnCtr] = new Button(ascLabel);
-                hBox.getChildren().add(keyBoardBtns[btnCtr]);
-                System.out.println(ascLabel);
-                System.out.println("A=" +a);
-                btnCtr++;
-            }
+        for (int i = 65; i < 90; i++) {
+            String ascLabel = Character.toString(i);
+            keyBoardBtns[btnCtr] = new Button(ascLabel);
+            int finalBtnCtr = btnCtr;
+            keyBoardBtns[btnCtr].setOnAction(e -> {
+                keyBoardBtns[finalBtnCtr].setDisable(true);
+            });
+            hBox.getChildren().add(keyBoardBtns[btnCtr]);
+            btnCtr++;
+        }
 
     }
 
-    public void testChar()
-    {
+    public void testChar() {
 
-        for (int i = 65; i <90 ; i++) {
+        for (int i = 65; i < 90; i++) {
             String tst = Character.toString(i);
-            System.out.println("test char is "+tst);
+            System.out.println("test char is " + tst);
         }
 
 
-
     }
+
+    public void removeKeyboardButtons() {
+        for (Button keyBoardBtn : keyBoardBtns) {
+            hBox.getChildren().remove(keyBoardBtn);
+        }
+    }
+
 }
