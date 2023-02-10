@@ -39,6 +39,7 @@ public class HelloController implements Initializable {
 
         btnRemoveKeyboard= new Button("Remove Keyboard");
         btnRemoveKeyboard.setOnAction(e-> removeKeyboardButtons());
+        btnRemoveKeyboard.setDisable(true);
         hBox.getChildren().add(btnRemoveKeyboard);
 
     }
