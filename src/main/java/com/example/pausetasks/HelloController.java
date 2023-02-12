@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class HelloController implements Initializable {
 
     private final Button[] RadioBtns = new Button[10];
-    private final Button[] keyBoardBtns = new Button[25];
+    private final Button[] keyBoardBtns = new Button[26];
     public AnchorPane rootPane;
     public HBox hBox;
     public Button btnAddRadio;
@@ -79,13 +79,15 @@ public class HelloController implements Initializable {
         int btnCtr = 0;
 
         removeRadioButtons();
-        for (int i = 65; i < 90; i++) {
+        for (int i = 65; i <= 90; i++) {
             String ascLabel = Character.toString(i);
             keyBoardBtns[btnCtr] = new Button(ascLabel);
+
             int finalBtnCtr = btnCtr;
             keyBoardBtns[btnCtr].setOnAction(e -> keyBoardBtns[finalBtnCtr].setDisable(true));
             hBox.getChildren().add(keyBoardBtns[btnCtr]);
             btnCtr++;
+            System.out.println(btnCtr + "btcr");
         }
         btnRemoveKeyboard.setDisable(false);
         btnMakeKeyboard.setDisable(true);
@@ -94,9 +96,9 @@ public class HelloController implements Initializable {
 
     public void testChar() {
 
-        for (int i = 65; i < 90; i++) {
+        for (int i = 65; i <= 90; i++) {
             String tst = Character.toString(i);
-            System.out.println("test char is " + tst);
+            System.out.println("test char is " + tst+" Char is "+i);
         }
     }
 
