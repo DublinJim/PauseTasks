@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="773777a3-77d2-4551-b183-d77035035d89" name="Changes" comment="added a stylesheet">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4e35fc1d-dcd0-45bb-8cb1-40b94ecd4db6" name="Changes" comment="better css">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pausetasks/click.m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pausetasks/piano2.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pausetasks/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pausetasks/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,42 +20,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2L9SHeBWdDvCS1p4vJD1zubaXml" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/james.keogh/IdeaProjects/proto/PauseTasks/src/main/resources/com/example/pausetasks&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/james.keogh/IdeaProjects/proto/PauseTasks/src/main/resources/com/example/pausetasks"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\james.keogh\IdeaProjects\proto\PauseTasks\src\main\resources\com\example\pausetasks" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\james.keogh\IdeaProjects\proto\PauseTasks\src\main\resources\com\example\pausetasks" />
-      <recent name="C:\Users\james.keogh\IdeaProjects\proto\PauseTasks\src\" />
-      <recent name="C:\Users\james.keogh\IdeaProjects\proto\PauseTasks\src" />
-      <recent name="C:\Users\james.keogh\IdeaProjects\proto\PauseTasks\src\main\java" />
     </key>
   </component>
   <component name="RunManager">
@@ -76,146 +53,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="773777a3-77d2-4551-b183-d77035035d89" name="Changes" comment="" />
-      <created>1675281720945</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1675281720945</updated>
-    </task>
-    <task id="LOCAL-00001" summary="makes an array of 10 buttons">
-      <created>1675695450763</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675695450763</updated>
-    </task>
-    <task id="LOCAL-00002" summary="10 buttons appear marked 1 to 10">
-      <created>1675706644914</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675706644914</updated>
-    </task>
-    <task id="LOCAL-00003" summary="makes a keyboard">
-      <created>1675868707744</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675868707744</updated>
-    </task>
-    <task id="LOCAL-00004" summary="keyboard buttons have functions">
-      <created>1676053108624</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1676053108624</updated>
-    </task>
-    <task id="LOCAL-00005" summary="button disable added">
-      <created>1676054299758</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1676054299758</updated>
-    </task>
-    <task id="LOCAL-00006" summary="button disables in place">
-      <created>1676054588890</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1676054588890</updated>
-    </task>
-    <task id="LOCAL-00007" summary="added hbox for buttons">
-      <created>1676055788705</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1676055788705</updated>
-    </task>
-    <task id="LOCAL-00008" summary="all button function and grey out as required">
-      <created>1676056516226</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676056516226</updated>
-    </task>
-    <task id="LOCAL-00009" summary="all buttons removed if mode is changed from radio to keyboard">
-      <created>1676057776095</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1676057776095</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added a stylesheet">
-      <created>1676059605649</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1676059605649</updated>
-    </task>
-    <task id="LOCAL-00011" summary="added a stylesheet">
-      <created>1676059620874</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1676059620874</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added a stylesheet">
-      <created>1676060238171</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1676060238171</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="makes an array of 10 buttons" />
-    <MESSAGE value="10 buttons appear marked 1 to 10" />
-    <MESSAGE value="makes a keyboard" />
-    <MESSAGE value="keyboard buttons have functions" />
-    <MESSAGE value="button disable added" />
-    <MESSAGE value="button disables in place" />
-    <MESSAGE value="added hbox for buttons" />
-    <MESSAGE value="all button function and grey out as required" />
-    <MESSAGE value="all buttons removed if mode is changed from radio to keyboard" />
-    <MESSAGE value="added a stylesheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a stylesheet" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/pausetasks/HelloController.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

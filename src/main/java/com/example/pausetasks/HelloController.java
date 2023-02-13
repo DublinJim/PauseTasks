@@ -6,8 +6,15 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class HelloController implements Initializable {
 
@@ -39,7 +46,7 @@ public class HelloController implements Initializable {
         tstBtn = new Button("Spare");
 
         btnMakeKeyboard.setOnAction(e -> makeKeyboardButtons());
-        tstBtn.setOnAction(e -> testChar());
+
 
         btnRemoveKeyboard = new Button("Remove Keyboard");
         btnRemoveKeyboard.setOnAction(e -> removeKeyboardButtons());
@@ -50,6 +57,14 @@ public class HelloController implements Initializable {
         btnHbox.getChildren().add(btnRemoveKeyboard);
         btnHbox.getChildren().add(tstBtn);
 
+        File wavFile = new File("C:\\Users\\james.keogh\\IdeaProjects\\proto\\PauseTasks\\src\\main\\resources\\com\\example\\pausetasks\\piano2.wav");
+        tstBtn.setOnAction(e -> {
+            try {
+                playSound(wavFile);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
     }
 
     public void addRadioFunc() {
@@ -87,7 +102,7 @@ public class HelloController implements Initializable {
             keyBoardBtns[btnCtr].setOnAction(e -> keyBoardBtns[finalBtnCtr].setDisable(true));
             hBox.getChildren().add(keyBoardBtns[btnCtr]);
             btnCtr++;
-            System.out.println(btnCtr + "btcr");
+            System.out.println(btnCtr + " btcr");
         }
         btnRemoveKeyboard.setDisable(false);
         btnMakeKeyboard.setDisable(true);
@@ -99,6 +114,7 @@ public class HelloController implements Initializable {
         for (int i = 65; i <= 90; i++) {
             String tst = Character.toString(i);
             System.out.println("test char is " + tst+" Char is "+i);
+
         }
     }
 
@@ -108,6 +124,20 @@ public class HelloController implements Initializable {
         }
         btnRemoveKeyboard.setDisable(true);
         btnMakeKeyboard.setDisable(false);
+    }
+
+    private void playSound(File Sound) throws IOException {
+        try {
+
+            Clip clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(Sound));
+            clip.start();
+
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
