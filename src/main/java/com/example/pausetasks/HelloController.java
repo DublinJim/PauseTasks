@@ -57,7 +57,8 @@ public class HelloController implements Initializable {
         btnHbox.getChildren().add(btnRemoveKeyboard);
         btnHbox.getChildren().add(tstBtn);
 
-        File wavFile = new File("C:\\Users\\james.keogh\\IdeaProjects\\proto\\PauseTasks\\src\\main\\resources\\com\\example\\pausetasks\\piano2.wav");
+
+        File wavFile = new File("src/main/resources/com/example/pausetasks/click.m4a");
         tstBtn.setOnAction(e -> {
             try {
                 playSound(wavFile);
@@ -133,9 +134,7 @@ public class HelloController implements Initializable {
             clip.open(AudioSystem.getAudioInputStream(Sound));
             clip.start();
 
-        } catch (LineUnavailableException e) {
-            e.printStackTrace();
-        } catch (UnsupportedAudioFileException | IOException e) {
+        } catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
             e.printStackTrace();
         }
     }
